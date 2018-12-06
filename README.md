@@ -35,18 +35,21 @@ $ localhost:5000/getblocks
 $ localhost:5001/getblocks
 ```
 /transactions/new and /nodes/register are POST requests and the rest are GET requests. HTTP-POST requests need to be filled in with JSON format arguments.
+
 for /transactions/new
 {
 	"sender": "127.0.0.1:5000",
 	"recipient": "127.0.0.1:5001",
 	"amount": 50
 }
+
 for /nodes/register
 {
 	"nodes":["http://127.0.0.1:5001"]
 }
 
 3. Detailed step example
+
 USE localhost:5000/nodes/register with data in JSON
 {
 	"nodes":["http://127.0.0.1:5001"]
